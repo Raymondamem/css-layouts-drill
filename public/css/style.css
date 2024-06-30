@@ -1,0 +1,228 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[href="#goup"] {
+  position: fixed;
+  z-index: 2;
+  top: auto;
+  left: auto;
+  right: 5%;
+  bottom: 5%;
+  text-decoration: none;
+  font-style: italic;
+  font-size: larger;
+  color: white;
+  background-color: purple;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+[href="#goup"]:hover {
+  background-color: white;
+  color: purple !important;
+}
+
+.mainWrapper {
+  position: relative;
+  min-height: 100vh;
+}
+.mainWrapper_upperItem {
+  position: inherit;
+  height: 100vh;
+  background: url("../imgs/hospital_pics.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+  z-index: 2;
+}
+.mainWrapper_upperItem::before {
+  content: "Welcome To RayLex Frontend 🥂";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+.mainWrapper_header {
+  position: sticky;
+  top: 0 !important;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: black;
+  z-index: 2;
+}
+.mainWrapper_header_logo {
+  padding: 1rem 0.5rem;
+  color: white;
+  text-transform: capitalize;
+}
+.mainWrapper_header_logo::first-letter {
+  font-size: xx-large;
+  color: red;
+  font-style: italic;
+  text-decoration: underline;
+}
+.mainWrapper_header_logo:hover {
+  font-size: xx-large;
+  text-decoration: underline;
+  color: red;
+}
+.mainWrapper_header_logo:hover::first-letter {
+  text-decoration: none;
+}
+.mainWrapper_header_nav {
+  width: 40%;
+  display: inherit;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainWrapper_header_nav a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  padding: 1rem 0.5rem;
+}
+.mainWrapper_header_nav a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 1.5rem 0 1.5rem 0;
+}
+.mainWrapper_header_menu {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+.mainWrapper_header_menu, .mainWrapper_header_menu > * {
+  display: block;
+}
+.mainWrapper_header_menu > span {
+  padding: 0.2rem 1rem;
+  background: white;
+  border: none;
+  position: relative;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.mainWrapper_header_menu > span::before, .mainWrapper_header_menu > span::after {
+  content: "";
+  pointer-events: none;
+  background-color: white;
+  display: inherit;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -150%;
+  border-radius: 0.5rem;
+}
+.mainWrapper_header_menu > span::after {
+  top: auto;
+  bottom: -160%;
+}
+.mainWrapper_header_menu:hover {
+  background-color: white;
+}
+.mainWrapper_header_menu:hover > span, .mainWrapper_header_menu:hover > span::before, .mainWrapper_header_menu:hover > span::after {
+  background-color: black;
+}
+.mainWrapper_bottomItem {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+}
+.mainWrapper_bottomItem_aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: auto;
+  width: 30%;
+  min-height: 100%;
+  background: url("../imgs/pexels-clive-kim-2523249-4221067.jpg") no-repeat center/cover;
+}
+.mainWrapper_bottomItem_aside_nav {
+  display: block;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+.mainWrapper_bottomItem_aside_nav a {
+  display: inherit;
+  width: 90%;
+  margin: 2rem auto;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+}
+.mainWrapper_bottomItem_main {
+  width: 70%;
+  margin-right: 0;
+  margin-left: auto;
+  background: url("../imgs/pexels-lynxexotics-4143686.jpg") no-repeat center/cover;
+}
+.mainWrapper_bottomItem_main > div:first-child {
+  background: url("../imgs/hospital_pics.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.mainWrapper_bottomItem_main > div:nth-child(2) {
+  background: url("../imgs/pexels-clive-kim-2523249-4221067.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.mainWrapper_bottomItem_main > div:nth-child(3) {
+  background: url("../imgs/hospital_pics.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.mainWrapper_bottomItem_main > div:nth-child(4) {
+  background: url("../imgs/pexels-clive-kim-2523249-4221067.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.mainWrapper_bottomItem_main > div:last-child {
+  background: url("../imgs/hospital_pics.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.mainWrapper_bottomItem_collaps {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.mainWrapper_bottomItem_collaps:checked + .mainWrapper_bottomItem_aside, .mainWrapper_bottomItem_collaps:checked + .mainWrapper_bottomItem_aside * {
+  opacity: 0;
+  width: 0px;
+  overflow: hidden;
+}
+.mainWrapper_bottomItem_collaps:checked ~ .mainWrapper_bottomItem_main {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
